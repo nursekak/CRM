@@ -84,19 +84,19 @@ docker-compose up -d
 ## Preview 
 
 ### Dashboard
-![Dashboard pic](images/dashboard.png)
+![Dashboard pic](images/dashboard.jpg)
 ### printers tab
-![All printers](images/printers.png)
-![Alt text](images/create_new.png)
-![Alt text](printer_info/filename.png)
+![All printers](images/printers.jpg)
+![Alt text](images/create_new.jpg)
+![Alt text](printer_info/filename.jpg)
 ### Consumables(расходники)
-![Alt text](images/rashodniki.png)
+![Alt text](images/rashodniki.jpg)
 
 ### Products (изделия)
-![Alt text](images/detali.png)
+![Alt text](images/detali.jpg)
 
 ### Warehouse (Склад)
-![Alt text](images/sklad.png)
+![Alt text](images/sklad.jpg)
 
 ### Sending (Отпрака)
-![Alt text](images/otpravka.png)
+![ff](images/otpravka.jpg)
