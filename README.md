@@ -80,6 +80,23 @@ docker-compose up -d
 
 Заголовок авторизации: `Authorization: Bearer <token>`.
 
-## Лицензия
 
-MIT
+## Preview 
+
+### Dashboard
+![Dashboard pic](images/dashboard.png)
+### printers tab
+![All printers](images/printers.png)
+![Alt text](images/create_new.png)
+![Alt text](printer_info/filename.png)
+### Consumables(расходники)
+![Alt text](images/rashodniki.png)
+
+### Products (изделия)
+![Alt text](images/detali.png)
+
+### Warehouse (Склад)
+![Alt text](images/sklad.png)
+
+### Sending (Отпрака)
+![Alt text](images/otpravka.png)
