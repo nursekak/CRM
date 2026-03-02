@@ -1,0 +1,41 @@
+services:
+  db:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_USER: crm
+      POSTGRES_PASSWORD: crm
+      POSTGRES_DB: crm
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U crm"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build: ./backend
+    ports:
+      - "3001:3001"
+    environment:
+      PORT: 3001
+      DATABASE_URL: postgresql://crm:crm@db:5432/crm
+      JWT_SECRET: change-me-in-production
+      NODE_ENV: development
+    depends_on:
+      db: { condition: service_healthy }
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "5173:5173"
+    environment:
+      VITE_API_URL: http://localhost:3001
+    depends_on:
+      - backend
+    command: npm run dev
+
+volumes:
+  pgdata:
